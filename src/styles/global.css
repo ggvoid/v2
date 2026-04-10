@@ -1,6 +1,9 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #FFEDDF;
+  background-color: #1C5D99;
   font-family: 'Fira Code', monospace;
+  height: 100%;
+  width: 100%;
+  overflow: 'hidden';
 }
