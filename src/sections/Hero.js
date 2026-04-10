@@ -64,9 +64,9 @@ const Hero = () => (
               repeat={0}
           />
         </div>
-        <p style={style.p}><b>CURRENTLY LOOKING FOR NEW OPPORTUNITIES</b>.</p>
-        <p style={style.p}>Software Engineer, Frontend, {' '}<a style={style.a} href="https://www.bettercloud.com/" target="_blank" rel="noreferrer">BetterCloud</a>.</p>
-        <p style={style.p}>MS in CS, Machine Learning, {' '}<b>Georgia Institute of Technology</b>.</p>
+        <p style={style.p}><b>Experienced Software Engineer focused on building intuitive experiences</b>.</p>
+        <p style={style.p}>Software Engineer, Full Stack, {' '}<a style={style.a} href="https://www.fanduel.com/" target="_blank" rel="noreferrer">fanduel</a>.</p>
+        <p style={style.p}>MS in CS, HCI, {' '}<b>Georgia Institute of Technology</b>.</p>
         <p style={style.p}>BS in CS, {' '}<b>Florida International Unitversity</b>.</p>
       </div>
     </div>
