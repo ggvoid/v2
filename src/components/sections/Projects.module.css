@@ -1,0 +1,20 @@
+.grid { display: grid; gap: 1.5rem; margin-top: 3.5rem; }
+.grid > li { display: flex; }
+.fullHeight { width: 100%; }
+.card { height: 100%; overflow: hidden; display: flex; flex-direction: column; }
+.media { position: relative; aspect-ratio: 16 / 10; border-bottom: 1px solid var(--color-border); overflow: hidden; }
+.image { object-fit: cover; transition: transform 0.7s; }
+.card:hover .image, .card:hover .placeholder { transform: scale(1.05); }
+.placeholder { height: 100%; display: grid; place-items: center; transition: transform 0.7s; background: radial-gradient(circle at 30% 20%, var(--color-glow), transparent 60%), radial-gradient(var(--color-border) 1px, transparent 1px) 0 0 / 18px 18px; }
+.placeholder span { font-family: var(--font-display); font-size: 4rem; color: var(--color-highlight); }
+.placeholder small { position: absolute; right: 0.75rem; bottom: 0.6rem; font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-text-muted); }
+.body { display: flex; flex-direction: column; flex-grow: 1; padding: 1.5rem; }
+.title { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; }
+.description { margin-top: 0.5rem; flex-grow: 1; color: var(--color-text-muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
+.links { display: flex; gap: 1.25rem; margin-top: 1.5rem; font-size: 0.9rem; font-weight: 500; }
+.link { display: inline-flex; align-items: center; gap: 0.4rem; transition: color 0.3s; }
+.link:hover { color: var(--color-highlight); }
+.demoLink { color: var(--color-accent-text); }
+@media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); } }

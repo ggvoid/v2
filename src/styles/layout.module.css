@@ -1,0 +1,6 @@
+/* Shared layout primitives, reused across sections. */
+.container { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: 7rem 0; border-top: 1px solid var(--color-border); }
+.sectionTitle { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; letter-spacing: -0.01em; max-width: 40rem; }
+.card { border: 1px solid var(--color-border); background: var(--color-surface); border-radius: 1.1rem; transition: transform 0.35s var(--ease-out), border-color 0.3s, box-shadow 0.35s; }
+.card:hover { transform: translateY(-4px); border-color: var(--color-accent-fill); box-shadow: 0 18px 40px -24px var(--color-accent-fill); }

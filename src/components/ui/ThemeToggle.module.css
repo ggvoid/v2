@@ -1,0 +1,10 @@
+.toggle { width: 2.5rem; height: 2.5rem; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--color-border); background: transparent; transition: border-color 0.3s; }
+.toggle:hover { border-color: var(--color-accent-fill); }
+.toggle > svg { grid-area: 1 / 1; }
+.sun { display: none; }
+:global(:root[data-theme='dark']) .sun { display: block; }
+:global(:root[data-theme='dark']) .moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme='light'])) .sun { display: block; }
+  :global(:root:not([data-theme='light'])) .moon { display: none; }
+}

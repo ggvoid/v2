@@ -1,0 +1,76 @@
+/*
+ * Design tokens. Palette: https://coolors.co/db9d47-f7f7ff-001021-23b5d3-2a4d14
+ *   gold #DB9D47 · ghost white #F7F7FF · navy #001021 · cyan #23B5D3 · forest #2A4D14
+ */
+:root {
+  --palette-gold: #db9d47;
+  --palette-ghost: #f7f7ff;
+  --palette-navy: #001021;
+  --palette-cyan: #23b5d3;
+  --palette-forest: #2a4d14;
+
+  /* Light theme (default) */
+  --color-background: var(--palette-ghost);
+  --color-text: var(--palette-navy);
+  --color-text-muted: color-mix(in srgb, var(--palette-navy) 66%, var(--palette-ghost));
+  --color-border: color-mix(in srgb, var(--palette-navy) 14%, var(--palette-ghost));
+  --color-surface: color-mix(in srgb, white 70%, var(--palette-ghost));
+  --color-accent-text: var(--palette-forest); /* accent for text: meets contrast on light */
+  --color-accent-fill: var(--palette-cyan);   /* accent for fills, rings, glows */
+  --color-highlight: var(--palette-gold);
+  --color-glow: color-mix(in srgb, var(--palette-cyan) 22%, transparent);
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --color-background: var(--palette-navy);
+  --color-text: var(--palette-ghost);
+  --color-text-muted: color-mix(in srgb, var(--palette-ghost) 66%, var(--palette-navy));
+  --color-border: color-mix(in srgb, var(--palette-ghost) 15%, var(--palette-navy));
+  --color-surface: color-mix(in srgb, var(--palette-ghost) 5%, var(--palette-navy));
+  --color-accent-text: var(--palette-cyan);
+  --color-glow: color-mix(in srgb, var(--palette-cyan) 20%, transparent);
+  color-scheme: dark;
+}
+
+/* Follow the OS preference until the visitor picks a theme explicitly. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-background: var(--palette-navy);
+    --color-text: var(--palette-ghost);
+    --color-text-muted: color-mix(in srgb, var(--palette-ghost) 66%, var(--palette-navy));
+    --color-border: color-mix(in srgb, var(--palette-ghost) 15%, var(--palette-navy));
+    --color-surface: color-mix(in srgb, var(--palette-ghost) 5%, var(--palette-navy));
+    --color-accent-text: var(--palette-cyan);
+    --color-glow: color-mix(in srgb, var(--palette-cyan) 20%, transparent);
+    color-scheme: dark;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.4s, color 0.4s;
+}
+h1, h2, h3, p, ul, ol, dl, dd { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; cursor: pointer; }
+img { max-width: 100%; display: block; }
+:focus-visible { outline: 2px solid var(--color-accent-fill); outline-offset: 3px; border-radius: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

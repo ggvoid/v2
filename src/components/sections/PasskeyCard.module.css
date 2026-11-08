@@ -1,0 +1,16 @@
+.wrapper { position: relative; width: 100%; max-width: 24rem; margin: 0 auto; animation: float 7s ease-in-out infinite; }
+.glow { position: absolute; inset: -1.5rem; border-radius: 2rem; background: var(--color-glow); filter: blur(48px); }
+.card { position: relative; padding: 1.75rem; border-radius: 1.5rem; border: 1px solid var(--color-border); background: var(--color-surface); box-shadow: 0 30px 60px -30px rgb(0 16 33 / 0.35); }
+.statusRow { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-text-muted); }
+.verified { color: var(--color-accent-text); }
+.iconStage { display: grid; place-items: center; margin: 2.25rem 0; }
+.iconCircle { width: 6rem; height: 6rem; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--color-highlight); color: var(--color-highlight); transition: all 0.5s; }
+.iconVerified { color: var(--color-accent-text); border-color: var(--color-accent-fill); background: var(--color-glow); }
+.pulsing { animation: pulse 2.4s infinite; }
+.title { font-family: var(--font-display); font-size: 1.5rem; text-align: center; }
+.subtitle { font-size: 0.875rem; text-align: center; color: var(--color-text-muted); }
+.progress { display: flex; gap: 0.4rem; margin-top: 1.75rem; }
+.progressTrack { flex: 1; height: 4px; border-radius: 4px; background: var(--color-border); overflow: hidden; }
+.progressFill { height: 100%; background: var(--color-accent-fill); transition: width 0.7s; }
+@keyframes float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-10px) rotate(-2deg); } }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 var(--color-glow); } 100% { box-shadow: 0 0 0 26px transparent; } }

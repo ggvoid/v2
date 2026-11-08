@@ -1,0 +1,15 @@
+.grid { display: grid; gap: 3.5rem; align-items: end; }
+.headline { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.05; letter-spacing: -0.01em; }
+.headline em { font-style: normal; color: var(--color-accent-text); }
+.invitation { margin-top: 1.5rem; max-width: 28rem; font-size: 1.1rem; color: var(--color-text-muted); }
+.methods { border-top: 1px solid var(--color-border); }
+.method { display: flex; align-items: center; gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid var(--color-border); transition: padding-left 0.3s var(--ease-out); }
+.method:hover { padding-left: 0.75rem; }
+.methodIcon { width: 2.75rem; height: 2.75rem; display: grid; place-items: center; border: 1px solid var(--color-border); border-radius: 50%; transition: border-color 0.3s, color 0.3s; }
+.method:hover .methodIcon { border-color: var(--color-highlight); color: var(--color-highlight); }
+.methodText { flex-grow: 1; display: grid; min-width: 0; }
+.methodLabel { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-text-muted); }
+.methodValue { font-size: 1.1rem; overflow-wrap: anywhere; }
+.methodArrow { color: var(--color-text-muted); transition: color 0.3s; }
+.method:hover .methodArrow { color: var(--color-highlight); }
+@media (min-width: 1024px) { .grid { grid-template-columns: 1fr 1fr; } }

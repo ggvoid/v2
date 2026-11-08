@@ -1,0 +1,15 @@
+.timeline { margin: 3.5rem 0 0 0.5rem; border-left: 1px solid var(--color-border); }
+.item { position: relative; padding: 0 0 2.5rem 2rem; }
+.item:last-child { padding-bottom: 0; }
+.marker { position: absolute; left: -7px; top: 0.6rem; width: 13px; height: 13px; border-radius: 50%; border: 2px solid var(--color-highlight); background: var(--color-background); }
+.currentMarker { background: var(--color-highlight); box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-highlight) 25%, transparent); }
+.card { padding: 1.5rem; }
+.titleRow { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.25rem 1.5rem; }
+.role { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; }
+.role span { color: var(--color-accent-text); }
+.period { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-muted); }
+.focus { margin-top: 0.25rem; font-size: 0.9rem; color: var(--color-text-muted); }
+.highlights { display: grid; gap: 0.7rem; margin-top: 1.25rem; color: var(--color-text-muted); }
+.highlights li { position: relative; padding-left: 1.1rem; }
+.highlights li::before { content: ''; position: absolute; left: 0; top: 0.7em; width: 4px; height: 4px; border-radius: 50%; background: var(--color-highlight); }
+@media (min-width: 640px) { .item { padding-left: 3rem; } .card { padding: 2rem; } }

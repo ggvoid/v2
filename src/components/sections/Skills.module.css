@@ -1,0 +1,9 @@
+.grid { display: grid; gap: 1.5rem; margin-top: 3.5rem; }
+.fullHeight { height: 100%; }
+.card { height: 100%; padding: 1.75rem; }
+.categoryName { font-family: var(--font-mono); font-weight: 400; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--color-accent-text); }
+.skillList { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.25rem; }
+.skill { padding: 0.45rem 1rem; border: 1px solid var(--color-border); border-radius: 999px; font-size: 0.9rem; transition: border-color 0.3s, color 0.3s; }
+.skill:hover { border-color: var(--color-highlight); color: var(--color-highlight); }
+.education { margin-top: 2.5rem; display: grid; gap: 0.25rem; font-size: 0.9rem; color: var(--color-text-muted); }
+@media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
