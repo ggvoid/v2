@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: 'Spotify Profile',
     description: 'A web app to view your top songs, artists and podcasts in a clean, data-forward interface.',
     technologies: ['React', 'Spotify API', 'Styled Components'],
-    githubUrl: '#',
+    githubUrl: 'https://github.com/ggvoid/spotify-profile',
     liveDemoUrl: '#',
   },
   {
@@ -19,8 +19,8 @@ export const projects: Project[] = [
   {
     title: 'gisellep.com',
     description: 'My personal website, built with Gatsby and deployed on Vercel.',
-    technologies: ['Gatsby', 'GraphQL', 'Vercel'],
-    githubUrl: '#',
+    technologies: ['Next.js', 'TypeScript', 'Vercel', 'CSS Modules'],
+    githubUrl: 'https://github.com/ggvoid/v2',
     liveDemoUrl: '#',
   },
 ];
